@@ -1,0 +1,248 @@
+:root {
+  --fallback-font-stack: Helvetica, Arial, serif;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.header-gallery {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.header-image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 32px;
+  margin: 5px auto 0;
+  width: 925px;
+  max-width: 85%;
+}
+
+@media (max-width: 575px) {
+  .header-image-row {
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 383px) {
+  .header-image-row {
+    column-gap: 8px;
+  }
+}
+
+.main-header-image {
+  width: 178px;
+  object-fit: contain;
+}
+
+.menu-icon {
+  width: 40px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+  object-fit: cover;
+}
+
+.gallery-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  margin: 37px auto 0;
+  width: 948px;
+  max-width: 85%;
+}
+
+.color-block {
+  min-height: 241px;
+  background-color: #d9d9d9;
+  border-radius: 27px;
+}
+
+.image-tiles-row {
+  display: flex;
+  column-gap: 24px;
+  margin: 23px 0 0;
+}
+
+@media (max-width: 767px) {
+  .image-tiles-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px 24px;
+  }
+}
+
+.color-tile {
+  margin: 0 0 1px;
+  width: 462px;
+  min-height: 126px;
+  background-color: #d9d9d9;
+  border-radius: 17px;
+}
+
+@media (max-width: 767px) {
+  .color-tile {
+    width: 100%;
+  }
+}
+
+.color-tile-1 {
+  margin: 1px 0 0;
+  width: 462px;
+  min-height: 126px;
+  background-color: #d9d9d9;
+  border-radius: 17px;
+}
+
+@media (max-width: 767px) {
+  .color-tile-1 {
+    width: 100%;
+  }
+}
+
+.color-indicator {
+  margin: 29px 0 0;
+  min-height: 73px;
+  background-color: #d9d9d9;
+  border-radius: 17px;
+}
+
+.color-grid {
+  display: grid;
+  gap: 15px 16px;
+  margin: 31px 0 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 767px) {
+  .color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 479px) {
+  .color-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.color-grid-item {
+  min-height: 106px;
+  background-color: #d9d9d9;
+  border-radius: 23px;
+}
+
+.footer-column {
+  position: sticky;
+  margin: 53px auto 0;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 93px;
+}
+
+@media (max-width: 383px) {
+  .footer-column {
+    margin: 50px auto 0;
+  }
+}
+
+.footer-bar-background {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  box-shadow: 0 0 17px 0 rgba(121, 120, 120, 0.25);
+  transform: translate(-50%, 0);
+}
+
+.footer-links-column {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 32px;
+  width: 815px;
+  height: 81px;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 767px) {
+  .footer-links-column {
+    column-gap: 16px; /* Mengurangi jarak antar elemen pada layar kecil */
+    width: 100%; /* Membuat lebar footer sesuai dengan lebar layar */
+    justify-content: space-around; /* Mengatur jarak antar elemen agar lebih merata */
+  }
+
+  .footer-link-item {
+    margin: 20px 0; /* Menyesuaikan margin antara figure */
+    width: 60px; /* Menurunkan lebar setiap item */
+  }
+}
+
+@media (max-width: 479px) {
+  .footer-links-column {
+    column-gap: 8px; /* Mengurangi jarak antar elemen lebih rapat lagi pada layar sangat kecil */
+  }
+
+  .footer-link-item {
+    width: 50px; /* Menurunkan ukuran lebar setiap item untuk layar kecil */
+  }
+}
+
+.footer-links-column .footer-link-item:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Membuat posisi elemen relatif */
+}
+
+.footer-links-column .footer-link-item:nth-child(3) .footer-icon {
+  width: 56px; /* Ukuran lebih besar untuk ikon logo Home */
+  height: 56px;
+  border-radius: 50%; /* Membuat lingkaran */
+  background-color: black;
+  position: absolute; /* Menggunakan posisi absolut */
+  top: -30px; /* Memastikan ikon keluar dari footer tanpa menutupi teks */
+  z-index: 1; /* Memastikan ikon tetap di atas footer */
+}
+
+.footer-links-column .footer-link-item:nth-child(3) .footer-link-description {
+  margin-top: 35px; /* Memberikan jarak pada teks agar tidak tertutupi oleh ikon */
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: black;
+}
+
+.footer-link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 9px;
+  margin: 32px 0 0;
+  width: 79px;
+}
+
+.footer-icon {
+  width: 25px;
+  object-fit: cover;
+}
+
+.footer-link-description {
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: black;
+}
