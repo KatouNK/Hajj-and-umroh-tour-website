@@ -14,7 +14,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="flex-column">
+<body class="flex-column ">
     <!-- Menambahkan konten utama dari halaman -->
     @yield('content')
 </body>

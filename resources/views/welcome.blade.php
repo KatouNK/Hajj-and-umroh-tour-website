@@ -11,28 +11,24 @@
     </section>
 
     <!-- Section untuk menampilkan gallery atau produk -->
-    <section class="gallery-display">
-        <div class="gallery-column">
-            <div class="color-block"></div>
-            <div class="image-tiles-row">
-                <div class="color-tile"></div>
-                <div class="color-tile-1"></div>
+    <section class="fles flex-col align-items-center gallery-display mt-14">
+        <div class="flex flex-col gap-8">
+            <div class="min-h-[240px] min-w-full bg-gray-300 rounded-xl"></div>
+            <div class="flex flex-col lg:flex-row gap-3">
+                <div class="w-[460px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-[460px] min-h-[126px] bg-gray-300 rounded-xl"></div>
             </div>
-            <div class="color-indicator"></div>
-            <div class="color-grid">
-                <div class="color-grid-item"></div>
-                <div class="color-grid-item"></div>
-                <div class="color-grid-item"></div>
-                <div class="color-grid-item"></div>
-                <div class="color-grid-item"></div>
-                <div class="color-grid-item"></div>
+            <div class="min-h-[240px] min-w-full bg-gray-300 rounded-xl"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <div class="w-full lg:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
             </div>
         </div>
     </section>
-
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
 
     <!-- Section untuk sticky footer navigation -->
     <section class="footer-navbar">
