@@ -30,6 +30,10 @@
         </div>
     </section>
 
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+
     <!-- Section untuk sticky footer navigation -->
     <section class="footer-navbar">
         <div class="footer-column">
