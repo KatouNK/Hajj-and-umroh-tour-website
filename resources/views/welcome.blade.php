@@ -47,7 +47,7 @@
     <section class="flex flex-col align-items-center container-sm mx-8 md:mx-auto mt-14">
         <div class="flex flex-col gap-8">
             <!-- Carousel Section -->
-            <div id="default-carousel" class="relative w-full overflow-hidden" data-carousel="slide">
+            <div id="default-carousel" class="relative w-full overflow-hidden shadow-xl" data-carousel="slide">
                 <!-- Carousel wrapper -->
                 <div class="relative h-[400px] overflow-hidden rounded-lg">
                     <!-- Item 1 -->
@@ -91,7 +91,7 @@
             <!-- Live Time Bandung and Mekkah -->
             <div class="flex flex-col md:flex-row gap-3 justify-between">
                 <!-- Bandung Time -->
-                <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-lg flex justify-between items-center px-6 py-4">
+                <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                     <div class="flex flex-col text-left">
                         <h3 class="text-lg font-medium text-black">Bandung</h3>
                         <p id="bandung-date" class="text-md font-light text-gray-500"></p>
@@ -102,7 +102,7 @@
                 </div>
 
                 <!-- Mekkah Time -->
-                <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-lg flex justify-between items-center px-6 py-4">
+                <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                     <div class="flex flex-col text-left">
                         <h3 class="text-lg font-medium text-purple-500">Mekkah</h3>
                         <p id="mekkah-date" class="text-md font-light text-gray-500"></p>
@@ -114,13 +114,29 @@
             </div>
 
             <!-- Placeholder for other sections -->
-            <div class="min-h-[240px] min-w-full bg-gray-300 rounded-xl"></div>
+            <div class="min-h-[240px] min-w-full bg-gray-300 shadow-xl rounded-xl"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="w-full md:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
-                <div class="w-full md:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
-                <div class="w-full md:w-[260px] min-h-[126px] bg-gray-300 rounded-xl"></div>
+                <!-- Al-Quran Button -->
+                <a href="#" class="w-full md:w-[260px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-green-50 transition-all">
+                    <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/alquran-icon.png') }}" alt="Al-Quran Icon">
+                    <p class="text-lg font-medium text-gray-700">Al-Qur'an</p>
+                    <p class="text-xs text-gray-500">30 Juz</p>
+                </a>
+
+                <!-- Doa Button -->
+                <a href="#" class="w-full md:w-[260px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-purple-50 transition-all">
+                    <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/doa-icon.png') }}" alt="Doa Icon">
+                    <p class="text-lg font-medium text-purple-600">Doa</p>
+                    <p class="text-xs text-gray-500">Kumpulan Doa-doa</p>
+                </a>
+
+                <!-- Zikir Button -->
+                <a href="#" class="w-full md:w-[260px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition-all">
+                    <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/zikir-icon.png') }}" alt="Zikir Icon">
+                    <p class="text-lg font-medium text-blue-500">Dzikir</p>
+                    <p class="text-xs text-gray-500">Zikir Counter</p>
+                </a>
             </div>
-        </div>
     </section>
 
     <!-- Section untuk sticky footer navigation -->
