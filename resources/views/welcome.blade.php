@@ -1,14 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="flex flex-col overflow-hidden bg-[#f4f4f4] pb-32">
+<!-- Sidebar -->
+<div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden transition-opacity duration-300 z-40"></div>
+<section class="sidebar">
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="p-4">
+        <div class="flex justify-between">
+            <h2 class="text-lg font-semibold">Sudah punya akun?</h2>
+            <button id="close-sidebar" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <button class="mt-2 w-full bg-green-500 text-white py-2 rounded">Masuk</button>
+    </div>
+    <div class="mt-6 px-4">
+        <h3 class="text-md font-semibold">TENTANG KAMI</h3>
+        <ul class="space-y-2 mt-2">
+            <li class="flex items-center"><a href="#">Profil</a></li>
+            <li class="flex items-center"><a href="#">Layanan</a></li>
+            <li class="flex items-center"><a href="#">Galeri</a></li>
+            <li class="flex items-center"><a href="#">Kontak</a></li>
+        </ul>
+    </div>
+    
+    </div>
+</section>
+
+<main id="main" class="flex flex-col overflow-hidden bg-[#f4f4f4] pb-32 transition-all duration-300">
     <!-- Section untuk header -->
     <section class="bg-white">
         <div class="container-sm mx-8 md:mx-auto flex justify-between items-center max-w-[85%] w-[925px]">
             <img class="main-header-image" src="{{ asset('assets/UntitledPage3/e219d07362486683403a2cb083b5ccdf.png') }}" alt="main image" />
-            <img class="menu-icon" src="{{ asset('assets/UntitledPage3/menu_icon.svg') }}" alt="menu icon" />
+            <button id="hamburger" class="p-4">
+                <img class="menu-icon" src="{{ asset('assets/UntitledPage3/menu_icon.svg') }}" alt="menu icon" />
+            </button>
         </div>
     </section>
+
+    
+    
 
     <!-- Section untuk menampilkan gallery atau produk -->
     <section class="flex flex-col align-items-center container-sm mx-8 md:mx-auto mt-14">
