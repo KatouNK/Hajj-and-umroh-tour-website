@@ -28,19 +28,18 @@
     </div>
 </section>
 
-<main id="main" class="flex flex-col overflow-hidden bg-[#f4f4f4] pb-32 transition-all duration-300">
-    <!-- Container for content -->
-    <div class="container mx-auto px-4 md:px-8 lg:px-12 max-w-[1100px]">
-        <!-- Section untuk header -->
-        <section class="bg-white">
-            <div class="flex justify-between items-center w-full">
+<main id="main" class="flex flex-col overflow-hidden lg:mx-auto bg-gray-300 pb-32 transition-all duration-300">
+     <!-- Section untuk header -->
+        <section class="bg-white fixed w-full max-w-[1000px] z-20">
+            <div class="flex max-w-[1000px] justify-between mx-auto items-center w-full">
                 <img class="main-header-image" src="{{ asset('assets/UntitledPage3/e219d07362486683403a2cb083b5ccdf.png') }}" alt="main image" />
                 <button id="hamburger" class="p-4">
                     <img class="menu-icon" src="{{ asset('assets/UntitledPage3/menu_icon.svg') }}" alt="menu icon" />
                 </button>
             </div>
         </section>
-
+    <!-- Container for content -->
+    <div class="container relative mx-auto px-4 md:px-8 lg:px-12 mt-20 max-w-[1000px] bg-[#f4f4f4]">
         <!-- Section untuk menampilkan gallery atau produk -->
         <section class="flex flex-col align-items-center mt-14">
             <div class="flex flex-col gap-8">
@@ -87,9 +86,9 @@
                 </div>
 
                 <!-- Live Time Bandung and Mekkah -->
-                <div class="flex flex-col md:flex-row gap-3 justify-between">
+                <div class="flex flex-col lg:flex-row gap-3 justify-between">
                     <!-- Bandung Time -->
-                    <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
+                    <div class="time-card w-full lg:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                         <div class="flex flex-col text-left">
                             <h3 class="text-lg font-medium text-black">Bandung</h3>
                             <p id="bandung-date" class="text-md font-light text-gray-500"></p>
@@ -100,7 +99,7 @@
                     </div>
 
                     <!-- Mekkah Time -->
-                    <div class="time-card w-full md:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
+                    <div class="time-card w-full lg:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                         <div class="flex flex-col text-left">
                             <h3 class="text-lg font-medium text-purple-500">Mekkah</h3>
                             <p id="mekkah-date" class="text-md font-light text-gray-500"></p>
@@ -113,23 +112,23 @@
 
                 <!-- Placeholder for other sections -->
                 <div class="min-h-[240px] min-w-full bg-gray-300 shadow-xl rounded-xl"></div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 justify-between lg:grid-cols-3 gap-6">
                     <!-- Al-Quran Button -->
-                    <a href="#" class="w-full md:w-[310px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-green-50 transition-all">
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-green-50 transition-all">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/alquran-icon.png') }}" alt="Al-Quran Icon">
                         <p class="text-lg font-medium text-gray-700">Al-Qur'an</p>
                         <p class="text-xs text-gray-500">30 Juz</p>
                     </a>
 
                     <!-- Doa Button -->
-                    <a href="#" class="w-full md:w-[310px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-purple-50 transition-all">
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-purple-50 transition-all">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/doa-icon.png') }}" alt="Doa Icon">
                         <p class="text-lg font-medium text-purple-600">Doa</p>
                         <p class="text-xs text-gray-500">Kumpulan Doa-doa</p>
                     </a>
 
                     <!-- Zikir Button -->
-                    <a href="#" class="w-full md:w-[310px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition-all">
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition-all">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/zikir-icon.png') }}" alt="Zikir Icon">
                         <p class="text-lg font-medium text-blue-500">Dzikir</p>
                         <p class="text-xs text-gray-500">Zikir Counter</p>
@@ -137,15 +136,15 @@
                 </div>
             </div>
         </section>
+        <section class="footer-navbar fixed bottom-10 max-w-[1000px] w-full">
+           
+                @include('partials.footer') <!-- Meng-include footer yang telah dipisahkan -->
+            
+        </section>
     </div>
 </main>
 
         <!-- Section untuk sticky footer navigation -->
-        <section class="footer-navbar">
-            <div class="footer-colum mt-14 min-h-20 w-full fixed bottom-0">
-                @include('partials.footer') <!-- Meng-include footer yang telah dipisahkan -->
-            </div>
-        </section>
 
 <script>
     let currentIndex = 0;

@@ -1,4 +1,4 @@
-<div class="relative top-0 left-[50%] flex justify-between gap-2 md:gap-4 w-full px-2 md:px-10 h-[50px] -translate-x-[50%]">
+<div class="relative top-0 left-[50%] flex justify-between gap-2 md:gap-4 w-full px-2 md:px-10 h-[50px] -translate-x-[55%]">
     <!-- Background Div Spanning Full Viewport Width -->
     <div class="absolute inset-x-0 top-3 bg-white bg-opacity-30 backdrop-blur-md h-[80px] z-0"></div>
 
