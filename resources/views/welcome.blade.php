@@ -28,18 +28,20 @@
     </div>
 </section>
 
-<main id="main" class="flex flex-col overflow-hidden lg:mx-auto bg-gray-300 pb-32 transition-all duration-300">
-     <!-- Section untuk header -->
-        <section class="bg-white fixed w-full max-w-[1000px] z-20">
-            <div class="flex max-w-[1000px] justify-between mx-auto items-center w-full">
-                <img class="main-header-image" src="{{ asset('assets/UntitledPage3/e219d07362486683403a2cb083b5ccdf.png') }}" alt="main image" />
-                <button id="hamburger" class="p-4">
-                    <img class="menu-icon" src="{{ asset('assets/UntitledPage3/menu_icon.svg') }}" alt="menu icon" />
-                </button>
-            </div>
-        </section>
+<main id="main" class="flex flex-col overflow-hidden lg:mx-auto bg-[#f4f4f4] pb-32 transition-all duration-300">
+
+    <!-- Section untuk header -->
+    <section class="bg-white fixed w-full max-w-[1000px] z-20">
+        <div class="flex max-w-[1000px] justify-between mx-auto items-center w-full">
+            <img class="main-header-image" src="{{ asset('assets/UntitledPage3/e219d07362486683403a2cb083b5ccdf.png') }}" alt="main image" />
+            <button id="hamburger" class="p-4">
+                <img class="menu-icon" src="{{ asset('assets/UntitledPage3/menu_icon.svg') }}" alt="menu icon" />
+            </button>
+        </div>
+    </section>
+
     <!-- Container for content -->
-    <div class="container relative mx-auto px-4 md:px-8 lg:px-12 mt-20 max-w-[1000px] bg-[#f4f4f4]">
+    <div class="container relative mx-auto px-4 md:px-8 lg:px-12 mt-20 max-w-[1000px]">
         <!-- Section untuk menampilkan gallery atau produk -->
         <section class="flex flex-col align-items-center mt-14">
             <div class="flex flex-col gap-8">
@@ -66,23 +68,6 @@
                         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
                 </div>
 
                 <!-- Live Time Bandung and Mekkah -->
@@ -110,41 +95,60 @@
                     </div>
                 </div>
 
+                <!-- Login Selection Container -->
+                <div class="min-h-[120px] min-w-full bg-white shadow-xl rounded-xl p-4 flex items-center justify-between">
+                    <!-- Left Section: Text and "Masuk disini" -->
+                    <div class="flex flex-col items-start space-y-0">
+                        <p class="text-purple-600 text-sm font-semibold">Sudah punya akun?</p>
+                        <p class="text-3xl font-bold text-gray-600">Masuk disini</p>
+                    </div>
+
+                    <!-- Right Section: Button -->
+                    <a href="#" class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-all">
+                        Masuk
+                    </a>
+                </div>
+
+                <!-- Fitur Lainnya Section -->
+                <section class="text-left">
+                    <h3 class="text-xl font-semibold text-gray-800">Fitur Lainnya</h3>
+                </section>
+
+
                 <!-- Placeholder for other sections -->
-                <div class="min-h-[240px] min-w-full bg-gray-300 shadow-xl rounded-xl"></div>
                 <div class="grid grid-cols-1 justify-between lg:grid-cols-3 gap-6">
                     <!-- Al-Quran Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-green-50 transition-all">
-                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/alquran-icon.png') }}" alt="Al-Quran Icon">
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/quran.png') }}" alt="Al-Quran Icon">
                         <p class="text-lg font-medium text-gray-700">Al-Qur'an</p>
                         <p class="text-xs text-gray-500">30 Juz</p>
                     </a>
 
                     <!-- Doa Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-purple-50 transition-all">
-                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/doa-icon.png') }}" alt="Doa Icon">
-                        <p class="text-lg font-medium text-purple-600">Doa</p>
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/praying.png') }}" alt="Doa Icon">
+                        <p class="text-lg font-medium text-black-600">Doa</p>
                         <p class="text-xs text-gray-500">Kumpulan Doa-doa</p>
                     </a>
 
                     <!-- Zikir Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition-all">
-                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/zikir-icon.png') }}" alt="Zikir Icon">
-                        <p class="text-lg font-medium text-blue-500">Dzikir</p>
+                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                        <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/tasbih.png') }}" alt="Zikir Icon">
+                        <p class="text-lg font-medium text-black-500">Dzikir</p>
                         <p class="text-xs text-gray-500">Zikir Counter</p>
                     </a>
                 </div>
+
             </div>
         </section>
+
         <section class="footer-navbar fixed bottom-10 max-w-[1000px] w-full">
            
-                @include('partials.footer') <!-- Meng-include footer yang telah dipisahkan -->
+            @include('partials.footer') 
             
         </section>
     </div>
 </main>
-
-        <!-- Section untuk sticky footer navigation -->
 
 <script>
     let currentIndex = 0;
