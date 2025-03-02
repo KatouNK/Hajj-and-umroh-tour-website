@@ -45,6 +45,7 @@
         <!-- Section untuk menampilkan gallery atau produk -->
         <section class="flex flex-col align-items-center mt-14">
             <div class="flex flex-col gap-8">
+
                 <!-- Carousel Section -->
                 <div id="default-carousel" class="relative w-full overflow-hidden shadow-xl" data-carousel="slide">
                     <!-- Carousel wrapper -->
@@ -71,11 +72,11 @@
                 </div>
 
                 <!-- Live Time Bandung and Mekkah -->
-                <div class="flex flex-col lg:flex-row gap-3 justify-between">
+                <div class="flex flex-col lg:flex-row gap-6 justify-between"> <!-- Adjusted gap -->
                     <!-- Bandung Time -->
                     <div class="time-card w-full lg:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                         <div class="flex flex-col text-left">
-                            <h3 class="text-lg font-medium text-black">Bandung</h3>
+                            <h3 class="text-2xl font-bold text-black">Bandung</h3>
                             <p id="bandung-date" class="text-md font-light text-gray-500"></p>
                         </div>
                         <div class="flex flex-col text-right">
@@ -86,7 +87,7 @@
                     <!-- Mekkah Time -->
                     <div class="time-card w-full lg:w-[460px] min-h-[150px] bg-white rounded-xl shadow-xl flex justify-between items-center px-6 py-4">
                         <div class="flex flex-col text-left">
-                            <h3 class="text-lg font-medium text-purple-500">Mekkah</h3>
+                            <h3 class="text-2xl font-bold text-black-500">Mekkah</h3>
                             <p id="mekkah-date" class="text-md font-light text-gray-500"></p>
                         </div>
                         <div class="flex flex-col text-right">
@@ -99,7 +100,7 @@
                 <div class="min-h-[120px] min-w-full bg-white shadow-xl rounded-xl p-4 flex items-center justify-between">
                     <!-- Left Section: Text and "Masuk disini" -->
                     <div class="flex flex-col items-start space-y-0">
-                        <p class="text-purple-600 text-sm font-semibold">Sudah punya akun?</p>
+                        <p class="text-purple-600 text-md font-semibold">Sudah punya akun?</p>
                         <p class="text-3xl font-bold text-gray-600">Masuk disini</p>
                     </div>
 
@@ -114,38 +115,107 @@
                     <h3 class="text-xl font-semibold text-gray-800">Fitur Lainnya</h3>
                 </section>
 
-
                 <!-- Placeholder for other sections -->
-                <div class="grid grid-cols-1 justify-between lg:grid-cols-3 gap-6">
+                <div class="flex flex-wrap justify-between sm:justify-start gap-6 lg:gap-2 mt-1">
                     <!-- Al-Quran Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                    <a href="#" class="w-full sm:w-[48%] lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/quran.png') }}" alt="Al-Quran Icon">
                         <p class="text-lg font-medium text-gray-700">Al-Qur'an</p>
                         <p class="text-xs text-gray-500">30 Juz</p>
                     </a>
 
                     <!-- Doa Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                    <a href="#" class="w-full sm:w-[48%] lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/praying.png') }}" alt="Doa Icon">
                         <p class="text-lg font-medium text-black-600">Doa</p>
                         <p class="text-xs text-gray-500">Kumpulan Doa-doa</p>
                     </a>
 
                     <!-- Zikir Button -->
-                    <a href="#" class="w-full lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
+                    <a href="#" class="w-full sm:w-[48%] lg:w-[285px] min-h-[126px] bg-white shadow-xl rounded-xl flex flex-col items-center justify-center p-4 hover:bg-white-50 transition-all transform hover:scale-105">
                         <img class="w-12 h-12 object-cover mb-2" src="{{ asset('assets/tasbih.png') }}" alt="Zikir Icon">
                         <p class="text-lg font-medium text-black-500">Dzikir</p>
                         <p class="text-xs text-gray-500">Zikir Counter</p>
                     </a>
                 </div>
 
+                <h3 class="text-xl font-semibold text-gray-800"> Paket Haji & jadwal keberangkatan</h3>
+
+
+                <!-- Packages Section -->
+                <div class="space-y-6">
+                    <!-- Package 1 -->
+                    <div class="bg-white shadow-md rounded-xl mt-4 p-4 flex gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('assets/package1.jpg') }}" alt="Package Image" class="w-[120px] h-[100px] object-cover rounded-md" />
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-gray-800">LCU UMROH HEMAT PASTI BERANGKAT 16D INDIGO SPECIAL LAILATUL QADR</h3>
+                            <p class="text-sm text-gray-500 mt-2">Berangkat 20 Maret 2025</p>
+                            <p class="text-lg font-bold text-purple-700 mt-2">Rp. 35,9 Jt</p>
+                            <p class="text-sm text-gray-500">Sisa 1 Seat Lagi</p>
+                        </div>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="bg-white shadow-md rounded-xl mt-4 p-4 flex gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('assets/package2.jpg') }}" alt="Package Image" class="w-[120px] h-[100px] object-cover rounded-md" />
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-gray-800">PROVEN 16D WY SPESIAL LAILATUL QADR</h3>
+                            <p class="text-sm text-gray-500 mt-2">Berangkat 20 Maret 2025</p>
+                            <p class="text-lg font-bold text-purple-700 mt-2">Rp. 44,9 Jt</p>
+                            <p class="text-sm text-gray-500">Sisa 2 Seat Lagi</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h3 class="text-xl font-semibold text-gray-800">Artikel Terbaru</h3>
+
+                <!-- Berita Terbaru Section (Simplified as Blocks) -->
+                <div class="mt-2">
+                    <!-- Article 1 -->
+                    <div class="bg-white shadow-xl rounded-lg p-4 mb-4">
+                        <div class="flex flex-col items-left">
+                            <img src="{{ asset('assets/artikel1.jpg') }}" alt="Article Image" class="w-full object-cover rounded-lg mb-4">
+                            <div class="w-2/3 text-left">
+                                <h4 class="text-lg font-semibold text-black">Umur 2 Bulan Sudah Haji? Kini Saudi Larang Anak Ikut Berhaji</h4>
+                                <p class="text-sm text-gray-500">14 Februari 2025</p>
+                                <a href="#" class="text-sm text-blue-500 hover:underline">Klik untuk membaca</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="bg-white shadow-xl rounded-lg p-4 mb-4 mt-4">
+                        <div class="flex flex-col items-left">
+                            <div class="w-2/3 text-left">
+                                <h4 class="text-lg font-semibold text-black">Saudi Umumkan Aturan Baru Haji 2025</h4>
+                                <p class="text-sm text-gray-500">1 Maret 2025</p>
+                                <a href="#" class="text-sm text-blue-500 hover:underline">Klik untuk membaca</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="bg-white shadow-xl rounded-lg p-4 mb-4 mt-4">
+                        <div class="flex flex-col items-left">
+                            <div class="w-2/3 text-left">
+                                <h4 class="text-lg font-semibold text-black">Saudi Umumkan Aturan Baru Haji 2025</h4>
+                                <p class="text-sm text-gray-500">1 Maret 2025</p>
+                                <a href="#" class="text-sm text-blue-500 hover:underline">Klik untuk membaca</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="footer-navbar fixed bottom-10 max-w-[1000px] w-full">
-           
             @include('partials.footer') 
-            
         </section>
     </div>
 </main>
