@@ -141,6 +141,87 @@
 
                 <h3 class="text-xl font-semibold text-gray-800"> Paket Haji & jadwal keberangkatan</h3>
 
+                <div class="">
+                    <h2 class="text-2xl font-semibold mb-2">Pilih Jadwal Keberangkatan</h2>
+                    <p class="text-gray-600 mb-6">Sesuaikan dengan keinginan anda untuk melihat paket tersedia</p>
+                
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Bulan -->
+                        <div class="relative">
+                            <button id="month-button" class="block w-full p-3 border border-gray-300 rounded-md bg-[#aaaa] text-white text-left focus:outline-none">
+                                <div class="flex justify-between">
+                                    <span>Bulan</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div id="month-drawer" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg hidden z-20">
+                                <ul class="max-h-60 overflow-y-auto">
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="januari">Januari</li>
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="februari">Februari</li>
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="maret">Maret</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Paket -->
+                        <div class="relative">
+                            <button id="package-button" class="block w-full p-3 border border-gray-300 rounded-md bg-[#aaaa] text-white text-left focus:outline-none">
+                                <div class="flex justify-between">
+                                    <span>Paket</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div id="package-drawer" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg hidden z-20">
+                                <ul class="max-h-60 overflow-y-auto">
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="paket1">Paket 1</li>
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="paket2">Paket 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Lokasi -->
+                        <div class="relative">
+                            <button id="location-button" class="block w-full p-3 border border-gray-300 rounded-md bg-[#aaaa] text-white text-left focus:outline-none">
+                                <div class="flex justify-between">
+                                    <span>Lokasi</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div id="location-drawer" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg hidden z-20">
+                                <ul class="max-h-60 overflow-y-auto">
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="lokasi1">Lokasi 1</li>
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="lokasi2">Lokasi 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Jumlah Hari -->
+                        <div class="relative">
+                            <button id="days-button" class="block w-full p-3 border border-gray-300 rounded-md bg-[#aaaa] text-white text-left focus:outline-none">
+                                <div class="flex justify-between">
+                                    <span>Jumlah Hari</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div id="days-drawer" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg hidden z-20">
+                                <ul class="max-h-60 overflow-y-auto">
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="1">1 Hari</li>
+                                    <li class="p-3 hover:bg-gray-100 cursor-pointer" data-value="2">2 Hari</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                             
 
                 <!-- Packages Section -->
                 <div class="space-y-6">
