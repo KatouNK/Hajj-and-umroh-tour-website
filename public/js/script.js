@@ -30,3 +30,39 @@ function closeSidebar() {
     // Menyembunyikan overlay
     overlay.classList.add('hidden');
 }
+
+    function setupDrawer(buttonId, drawerId) {
+        const button = document.getElementById(buttonId);
+        const drawer = document.getElementById(drawerId);
+
+        button.addEventListener('click', () => {
+            drawer.classList.toggle('hidden');
+        });
+
+        drawer.addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI') {
+                const value = event.target.getAttribute('data-value');
+                button.textContent = value.charAt(0).toUpperCase() + value.slice(1); // Menampilkan pilihan yang dipilih
+                drawer.classList.add('hidden'); // Menutup drawer setelah memilih
+            }
+        });
+    }
+
+    // Setup untuk setiap drawer
+    setupDrawer('month-button', 'month-drawer');
+    setupDrawer('package-button', 'package-drawer');
+    setupDrawer('location-button', 'location-drawer');
+    setupDrawer('days-button', 'days-drawer');
+
+    // Menutup drawer jika mengklik di luar
+    document.addEventListener('click', (event) => {
+        const drawers = ['month-drawer', 'package-drawer', 'location-drawer', 'days-drawer'];
+        drawers.forEach(drawerId => {
+            const drawer = document.getElementById(drawerId);
+            const button = document.getElementById(drawerId.replace('-drawer', '-button'));
+            if (!button.contains(event.target) && !drawer.contains(event.target)) {
+                drawer.classList.add('hidden');
+            }
+        });
+    });
+
